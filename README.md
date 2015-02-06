@@ -16,7 +16,7 @@ sudo vim /etc/hostname
 > your-hostname
 
 ```bash
-adduser _your-non-root-user_
+adduser your-non-root-user
 ```
 
 ```bash
