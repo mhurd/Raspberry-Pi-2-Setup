@@ -98,23 +98,19 @@ vim /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 > ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-
 > update_config=1
-
 > network={
-
-> key_mgmt=NONE
-
+>   key_mgmt=NONE
 > }
 > 
 > network={
-> ssid="your-ssid-here"
-> scan_ssid=1
-> proto=RSN
-> key_mgmt=WPA-PSK
-> pairwise=CCMP TKIP
-> group=CCMP TKIP
-> psk="your-key-here"
+>   ssid="your-ssid-here"
+>   scan_ssid=1
+>   proto=RSN
+>   key_mgmt=WPA-PSK
+>   pairwise=CCMP TKIP
+>   group=CCMP TKIP
+>   psk="your-key-here"
 > }
 
 ```bash
