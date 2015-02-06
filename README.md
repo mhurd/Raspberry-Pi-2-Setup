@@ -13,10 +13,6 @@ adduser your-non-root-user
 sudo vim /etc/hostname
 ```
 
-```
-> your-hostname
-```
-
 ```bash
 adduser your-non-root-user
 ```
@@ -98,41 +94,41 @@ aptitude install wireless-tools
 aptitude install wpasupplicant
 vim /etc/wpa_supplicant/wpa_supplicant.conf
 ```
-
+Enter this configuration into the _wpa_supplicant.conf_ file:
 ```
-> ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-> update_config=1
-> network={
->   key_mgmt=NONE
-> }
-> 
-> network={
->   ssid="your-ssid-here"
->   scan_ssid=1
->   proto=RSN
->   key_mgmt=WPA-PSK
->   pairwise=CCMP TKIP
->   group=CCMP TKIP
->   psk="your-key-here"
-> }
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={
+key_mgmt=NONE
+}
+
+network={
+ssid="your-ssid-here"
+scan_ssid=1
+proto=RSN
+key_mgmt=WPA-PSK
+pairwise=CCMP TKIP
+group=CCMP TKIP
+psk="your-key-here"
+}
 ```
 
 ```bash
 vim /etc/network/interfaces
 ```
-
+Enter this configuration into the _interfaces_ file:
 ```
-> source-directory /etc/network/interfaces.d
-> auto lo
-> 
-> iface lo inet loopback
-> 
-> iface eth0 inet dhcp
-> 
-> allow-hotplug wlan0
-> iface wlan0 inet dhcp
-> pre-up wpa_supplicant -Dwext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -> B -P /var/run/wpa_supplicant.wlan0.pid
-> post-down killall -q wpa_supplicant
+source-directory /etc/network/interfaces.d
+auto lo
+ 
+iface lo inet loopback
+
+iface eth0 inet dhcp
+ 
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+pre-up wpa_supplicant -Dwext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -> B -P /var/run/wpa_supplicant.wlan0.pid
+post-down killall -q wpa_supplicant
 ```
 
 ```bash
