@@ -27,7 +27,7 @@ ssh-add ~/.ssh/id_rsa
 ```
 
 ```bash
-adduser mhurd
+adduser your-non-root-user
 ```
 
 ```bash
