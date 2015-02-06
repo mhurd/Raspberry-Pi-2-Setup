@@ -70,12 +70,10 @@ ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/pi/variables ~/.dotfiles/variables
 ```
-
+Set */usr/bin/zsh* as the default shell:
 ```bash
 chsh
 ```
-
-> /usr/bin/zsh
 
 remove all references to ruby from the configured theme as we don't have the required ruby install:
 
@@ -134,7 +132,7 @@ post-down killall -q wpa_supplicant
 ```bash
 vim /etc/modprobe.d/8192cu.conf
 ```
-
+Disable the power saving mode by adding this configuration to the _8192cu.conf_ file:
 ```
-> options 8192cu rtw_power_mgnt=0 rtw_enusbss=0
+options 8192cu rtw_power_mgnt=0 rtw_enusbss=0
 ```
