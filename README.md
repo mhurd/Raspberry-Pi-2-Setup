@@ -40,7 +40,7 @@ eval `ssh-agent -s
 ssh-add ~/.ssh/id_rsa
 ```
 
-### as _root_ zsh / tmux setup
+### as _root_ (zsh / tmux setup)
 
 Specific to my setup and uses a private repo you may want to skip this...
 
