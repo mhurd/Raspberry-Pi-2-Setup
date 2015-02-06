@@ -13,7 +13,9 @@ adduser your-non-root-user
 sudo vim /etc/hostname
 ```
 
+```
 > your-hostname
+```
 
 ```bash
 adduser your-non-root-user
@@ -97,6 +99,7 @@ aptitude install wpasupplicant
 vim /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
+```
 > ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 > update_config=1
 > network={
@@ -112,11 +115,13 @@ vim /etc/wpa_supplicant/wpa_supplicant.conf
 >   group=CCMP TKIP
 >   psk="your-key-here"
 > }
+```
 
 ```bash
 vim /etc/network/interfaces
 ```
 
+```
 > source-directory /etc/network/interfaces.d
 > auto lo
 > 
@@ -128,9 +133,12 @@ vim /etc/network/interfaces
 > iface wlan0 inet dhcp
 > pre-up wpa_supplicant -Dwext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -> B -P /var/run/wpa_supplicant.wlan0.pid
 > post-down killall -q wpa_supplicant
+```
 
 ```bash
 vim /etc/modprobe.d/8192cu.conf
 ```
 
+```
 > options 8192cu rtw_power_mgnt=0 rtw_enusbss=0
+```
