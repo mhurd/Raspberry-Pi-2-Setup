@@ -87,7 +87,7 @@ vim ~/.oh-my-zsh/themes/fino-time.zsh-theme
 
 ### as _root_ (wireless setup)
 
-Assumes 150Mbps Wireless IEEE802.11b/g/n nano USB Adapter
+Assumes Edimax 150Mbps Wireless IEEE802.11b/g/n nano USB Adapter
 EW-7811Un
 
 ```bash
