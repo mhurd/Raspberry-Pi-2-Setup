@@ -134,5 +134,5 @@ vim /etc/modprobe.d/8192cu.conf
 ```
 Disable the power saving mode by adding this configuration to the _8192cu.conf_ file:
 ```
-options 8192cu rtw_power_mgnt=0 rtw_enusbss=0
+options 8192cu rtw_power_mgnt=0 rtw_enusbss=0 rtw_ips_mode=1
 ```
