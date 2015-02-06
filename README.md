@@ -61,6 +61,7 @@ Specific to my setup and uses a private repo you may want to skip this...
 
 ```bash
 aptitude install zsh
+aptitude install tmux
 ```
 
 ```bash
