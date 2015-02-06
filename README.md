@@ -6,6 +6,7 @@ Get it from [here](https://www.collabora.com/about-us/blog/2015/02/03/debian-jes
 
 ```bash
 passwd root
+adduser your-non-root-user
 ```
 
 ```bash
@@ -13,18 +14,6 @@ sudo vim /etc/hostname
 ```
 
 > your-hostname
-
-```bash
-ssh-keygen -t rsa -C "your_email@example.com"
-```
-
-```bash
-eval `ssh-agent -s
-```
-
-```bash
-ssh-add ~/.ssh/id_rsa
-```
 
 ```bash
 adduser your-non-root-user
@@ -36,24 +25,22 @@ dpkg-reconfigure locales
 
 ```bash
 apt-get install aptitude
-```
-
-```bash
 aptitude update
-```
-
-```bash
 aptitude safe-upgrade
 ```
 
 ```bash
 aptitude install sudo
+aptitude install vim
+aptitude install locate
 ```
+### As _your-non-root-user_
 
 ```bash
-aptitude install vim
+ssh-keygen -t rsa -C "your_email@example.com"
+eval `ssh-agent -s
+ssh-add ~/.ssh/id_rsa
 ```
-
 
 ### Zsh / tmux setup
 
@@ -73,37 +60,16 @@ that can be symlinked to from the home directory for zsh, tmux etc.
 
 ```bash
 git clone https://github.com/mhurd/.dotfiles.git
-```
-
-```bash
 cd .dotfiles
-```
-
-```bash
 git clone http://github.com/zsh-users/zsh-syntax-highlighting.git
-```
-
-```bash
 git clone https://github.com/rupa/z.git
 ```
 
 ```bash
 cd ~
-```
-
-```bash
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
-```
-
-```bash
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
-```
-
-```bash
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
-```
-
-```bash
 ln -s ~/.dotfiles/pi/variables ~/.dotfiles/variables
 ```
 
@@ -111,13 +77,13 @@ ln -s ~/.dotfiles/pi/variables ~/.dotfiles/variables
 chsh
 ```
 
+> /usr/bin/zsh
+
 remove all references to ruby from the configured theme as we don't have the required ruby install:
 
 ```bash
 vim ~/.oh-my-zsh/themes/fino-time.zsh-theme
 ```
-
-> /usr/bin/zsh
 
 ### as _root_ (wireless setup)
 
@@ -126,21 +92,8 @@ EW-7811Un
 
 ```bash
 aptitude install iw
-```
-
-```bash
 aptitude install wireless-tools
-```
-
-```bash
-aptitude install locate
-```
-
-```bash
 aptitude install wpasupplicant
-```
-
-```bash
 vim /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
