@@ -75,7 +75,7 @@ Set */usr/bin/zsh* as the default shell:
 chsh
 ```
 
-remove all references to ruby from the configured theme as we don't have the required ruby install:
+remove all references to rvm_ruby from the configured theme as we don't have the required ruby install:
 
 ```bash
 vim ~/.oh-my-zsh/themes/fino-time.zsh-theme
