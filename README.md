@@ -32,7 +32,7 @@ aptitude install sudo
 aptitude install vim
 aptitude install locate
 ```
-### As _your-non-root-user_
+### as _your-non-root-user_
 
 ```bash
 ssh-keygen -t rsa -C "your_email@example.com"
@@ -40,7 +40,7 @@ eval `ssh-agent -s
 ssh-add ~/.ssh/id_rsa
 ```
 
-### Zsh / tmux setup
+### as _root_ zsh / tmux setup
 
 Specific to my setup and uses a private repo you may want to skip this...
 
