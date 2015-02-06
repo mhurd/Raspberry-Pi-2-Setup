@@ -143,14 +143,14 @@ aptitude install wpasupplicant
 vim /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-network={
-key_mgmt=NONE
-}
-
-network={
-ssid="your-ssid-here"
+> ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+> update_config=1
+> network={
+> key_mgmt=NONE
+> }
+> 
+> network={
+> ssid="your-ssid-here"
 > scan_ssid=1
 > proto=RSN
 > key_mgmt=WPA-PSK
